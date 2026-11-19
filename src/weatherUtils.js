@@ -79,12 +79,23 @@ export function getDailyEntries(forecast, timezoneOffset) {
   });
 }
 
+
 export function getTodayHighLow(forecast, timezoneOffset) {
-  const todayKey = localDateKey(Math.floor(Date.now() / 1000), timezoneOffset);
-  const entries = (forecast?.list || []).filter(
+  const todayKey = localDateKey(
+    Math.floor(Date.now() / 1000),
+    timezoneOffset
+  );
+
+  const allEntries = forecast?.list || [];
+
+  const entries = allEntries.filter(
     item => localDateKey(item.dt, timezoneOffset) === todayKey
   );
-  if (!entries.length) return { high: null, low: null };
+
+  if (!entries.length) {
+    return { high: null, low: null };
+  }
+
   return {
     high: Math.max(...entries.map(item => item.main.temp_max)),
     low: Math.min(...entries.map(item => item.main.temp_min))
