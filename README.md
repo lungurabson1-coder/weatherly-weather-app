@@ -1,10 +1,10 @@
 # Weatherly – Full Stack Practical Assignment 1
 
 ## Student details
-- Student name: [Enter your full name]
-- Student ID: [Enter your student ID]
-- Repository URL: [Add your GitHub repository URL after publishing]
-- Live demo URL: [Add your deployed application URL after deployment]
+- Student name: [Rabson Lungu]
+- Student ID: [2410691]
+- Repository URL: https://github.com/lungurabson1-coder/weatherly-weather-app
+- Live Demo URL: https://weatherly-weather-app-psi.vercel.app/
 
 ## 1. Project overview
 Weatherly is a responsive React weather dashboard. It retrieves live weather data from OpenWeather and defaults to Ndola, Zambia. Users can search for another city and switch between Celsius and Fahrenheit.
@@ -116,19 +116,20 @@ weather-app-assignment/
 ## 9. Testing evidence
 Run the app and complete this table. Record actual results and attach screenshots in a `screenshots/` folder before submission.
 
+
 | No. | Test case | Expected result | Actual result | Status |
-|---:|---|---|---|---|
-| 1 | Open the application | Ndola weather loads automatically | To be completed | Pending |
-| 2 | Search for Lusaka | Location, current weather and forecasts update together | To be completed | Pending |
-| 3 | Submit an empty search | Helpful validation message appears | To be completed | Pending |
-| 4 | Search for an unknown city | City-not-found message appears | To be completed | Pending |
-| 5 | Check hourly forecast | Up to eight next available three-hour entries appear | To be completed | Pending |
-| 6 | Check five-day forecast | Five distinct available local dates appear where API data permits | To be completed | Pending |
-| 7 | Switch °C to °F | Every temperature changes; 0°C equals 32°F | To be completed | Pending |
-| 8 | Check a different time zone | Forecast times use the selected city's local time | To be completed | Pending |
-| 9 | Disable network or use invalid API key | Readable error and retry action appear | To be completed | Pending |
-| 10 | Resize browser to mobile width | Layout remains readable without page-wide horizontal scrolling | To be completed | Pending |
-| 11 | Open deployed URL | App and API requests work outside development environment | To be completed | Pending |
+|---|---|---|---|---|
+| 1 | Open the application | Ndola weather loads automatically | Ndola weather loaded successfully | Pass |
+| 2 | Search for Lusaka | Location, current weather and forecasts update | City search worked successfully | Pass |
+| 3 | Submit an empty search | Helpful validation message appears | Empty-search validation was tested | Pass |
+| 4 | Search for an unknown city | City-not-found message appears | Invalid-city feedback was tested | Pass |
+| 5 | Check hourly forecast | Up to eight next available three-hour entries appear | Hourly forecast displayed successfully | Pass |
+| 6 | Check five-day forecast | Five distinct available local dates appear | Five-day forecast displayed successfully | Pass |
+| 7 | Switch °C to °F | Every temperature changes units | Celsius and Fahrenheit switching worked | Pass |
+| 8 | Check a different time zone | Forecast times use the selected city's local time | Needs a separate verification test | Pending |
+| 9 | Disable network or use an invalid API key | Readable error and retry action appear | Error handling was tested during development | Pass |
+| 10 | Resize browser to mobile width | Layout remains readable without horizontal scrolling | Responsive layout was tested | Pass |
+| 11 | Open deployed URL | App and API requests work outside development environment | Live Vercel application loaded and weather requests worked | Pass |
 
 ### Screenshot evidence to capture
 - Desktop dashboard with current weather and forecasts.
@@ -182,3 +183,28 @@ If the provider's key must be confidential, deploy a backend/serverless API prox
 Weather data: OpenWeather (https://openweathermap.org/).
 
 AI assistance was used to help prepare the starter implementation and documentation. The student should review, test, understand and be prepared to explain the code before submission.
+
+## 14. Screenshots and Testing Evidence
+
+The following screenshots demonstrate the main features and functionality of Weatherly.
+
+### Desktop Dashboard
+![Weatherly Desktop Dashboard](screenshots/desktop-dashboard.png)
+
+### Mobile Dashboard
+![Weatherly Mobile Dashboard](screenshots/mobile-dashboard.png)
+
+### City Search
+![City Search](screenshots/city-search.png)
+
+### Hourly Forecast
+![Hourly Forecast](screenshots/hourly-forecast.png)
+
+### Five-Day Forecast
+![Five-Day Forecast](screenshots/five-day-forecast.png)
+
+### Temperature Switching
+![Temperature Switching](screenshots/temperature-switching.png)
+
+### Error Handling
+![Error Message](screenshots/error-message.png)
